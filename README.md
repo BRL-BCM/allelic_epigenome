@@ -20,7 +20,7 @@ Make sure reference genome files (.fa files) and BAM files are indexed and sorte
 
 **2.3** To combine allelic methylation count files generated (in Step 2.2) use the combineMethCounts.pl script. The inputs are a .txt file containing the paths to all the allelic methylation count files (from Step 2.2) in separate rows and an integer to specify the minimum number of counts per allele you want to use (e.g. 6 CpG counts used for the paper).
 
-**2.4** To add additional data (such 1000 genomes frequencies, rsIDs, ancestral allele information, etc.) combine the combined meth count file (from Step 2.3) with the annotation.txt by chromosome and position. The parseAnnotatedFile.pl script will then parse the combined meth count file (with the added annotation data) into a cleaner format as output. Input is the combined meth count file with the annotation data added. 
+**2.4** To add additional data (such 1000 genomes frequencies, rsIDs, ancestral allele information, etc.) combine the combined meth count file (from Step 2.3) with the annotation.txt by chromosome and position found on http://genboree.org/theCommons/documents/788. The parseAnnotatedFile.pl script will then parse the combined meth count file (with the added annotation data) into a cleaner format as output. Input is the combined meth count file with the annotation data added. 
 
 **2.5** To call allele-specific methylation on the parsed combined methylation count file, use the processCombinedMethCountsFunctions.R script. Relevant functions and their description are commented within the script. Input is the parsed the combined meth count file (from Step 2.4). 
 
