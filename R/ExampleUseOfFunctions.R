@@ -1,0 +1,5 @@
+source("methStatesFunctions.R")
+testMethStates <- readMethStates("test.methStates.txt")
+patsAndEnts <- extractPatternsAndEntropiesAllRegions(testMethStates,4)
+patternMatrix <- getObservedPatternsMatrix(patsAndEnts,4,30,0,4)
+stability <- findStability(patternMatrix,0.1)
